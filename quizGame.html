@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Set the character encoding and viewport settings -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Set the title of the document -->
+  <title>Document</title>
+  <!-- Link to an external CSS file for styling -->
+  <link rel="stylesheet" href="quizGame.css">
+</head>
+<body>
+  <!-- Main container for the quiz -->
+  <div class="container">
+    <!-- Container for the question and answer options, initially hidden -->
+    <div id="question-container" class="hide">
+      <!-- Paragraph element to display the question -->
+      <p id="question"></p>
+      <!-- Container for answer buttons with a specific class for styling -->
+      <div id="answer-buttons" class="btn-grid">
+        <!-- Answer buttons, initially empty and will be populated dynamically -->
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn wrong-answer">Answer 4</button>
+      </div>
+      <!-- Hidden div to display result message -->
+      <div id="result-message" class="hide"></div>
+    </div>
+    <!-- Controls section for starting the quiz and navigating between questions -->
+    <div class="controls">
+      <!-- Button to start the quiz, initially visible -->
+      <button id="start-btn" class="start-btn btn">Start</button>
+      <!-- Button to move to the next question, initially hidden -->
+      <button id="next-btn" class="next-btn hide">Next</button>
+    </div>
+    <!-- Element to display feedback on selected answers -->
+    <div id="answer-feedback" class="answer-feedback"></div>
+    <!-- Element to display the current score -->
+    <div class="score" id="score">
+      <!-- Text indicating the purpose of the score display -->
+      <span class="score-text">Number of correct answers:</span>
+      <!-- Element to display the actual score, initially set to 0 -->
+      <span id="right-answers">0</span>
+    </div>
+  </div>
+  <!-- Include JavaScript files for quiz functionality -->
+  <script src="quizQuestions.js"></script>
+  <script src="quizGame.js"></script>
+</body>
+</html>
